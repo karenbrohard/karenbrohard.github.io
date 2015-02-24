@@ -1,1 +1,77 @@
-<h1>Tic Tac Toe: Brohard Style</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<style type="text/css">
+		td {
+			border: 2px solid purple;
+			height: 125px;
+			width: 125px;
+			text-align: center;
+		}
+		table{
+			border: 2px solid purple;
+			margin: 0 auto 0 auto;
+		}
+		h1{
+			text-align: center;
+			color: navy;
+		}
+		*{
+			font-family: 'Open Sans', sans-serif;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			var cells = $('td');
+			cells.on("click", function(){
+				var cell = $(this);
+				var text = cell.text();
+				text = $.trim(text);
+				if(text == 'x'){
+					cell.text('o');
+				}
+				else if (text == 'o'){
+					cell.text('');
+				}
+				else {
+					cell.text('x');
+				}
+
+			});
+
+
+		})
+
+	</script>
+
+</head>
+<body>
+	<h1>Tic Tac Toe: Brohard Style</h1>
+	<table cellspacing="0">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+
+
+
+</body>
+
+
+</html>
